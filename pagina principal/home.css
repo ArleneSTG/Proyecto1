@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+    margin: 0px;
+}
+.nav{
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+.lilmenus{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.logo{
+    size: 40px;
+}
+li a {
+    display: block;
+    width: 70px;
+    color: aliceblue;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: gray;
+}
+
+.Left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.topbanner{
+    width: 100%;
+}
+.menuitem1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
