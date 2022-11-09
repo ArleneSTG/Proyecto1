@@ -6,6 +6,47 @@ body{
     height: 100vh;
 }
 
+header nav {
+    background-color: #202124;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    overflow: hidden;
+    margin-right: 25px;
+}
+
+header nav ul li {
+    float: right;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 20px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17.5px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: #662d91;
+}
+
+.barra-nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    padding-top: 3px;
+    width: 70px;
+    height: 50px;
+}
+
 .formulario{
     position: absolute;
     top: 50%;

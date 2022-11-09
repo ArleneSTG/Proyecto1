@@ -4,29 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="home.css">
-    <title>home</title>
 </head>
 <body>
     <header>
-        <nav class="nav">
-            <ul class="lilmenus">
-                <li class="Left"><a href=""><img src="img/" alt=""></a></li>
-                <li class="Left"><a href=""> Sobre nosotros</a></li>
-                <li class="Left"><a href=""> contacto</a></li>
-                <li class="Left"><a href=""> Reservar</a></li>
-                <li class="right"><a href=""> Iniciar sesion</a></li>
-                <li class="right"><input type="text" placeholder="search..."></li>
+        <!--Una barra con un menu y su logo-->
+        <nav class="barra-nav">
+            <ul>
+                <a href="D:/Github works/Proyecto1/pagina principal/home.html"><img class="logo" src="D:/Github works/Proyecto1/pagina principal/img/logo-removebg-preview.png" alt=""></a>
+                <li><a href="">Reservas</a></li>
+                <li><a href="D:/Github works/Proyecto1/Página de Inicio de Sesion/inicio.html">Iniciar sesion</a></li>
+                <li><a href="">Menu</a></li>
             </ul>
         </nav>
-        <div class="bn">
-            <img class="topbanner" src="img/home banner.png" alt="">
-        </div>
     </header>
-    <div class="menucarrousel">
-        <a href="">
-            <img class="menuitem1" src="img/live-octopus-korean1.jpg" alt="">
-        </a>
+
+    <div class="slides">
+        <div class="slide">
+            <img src="img/live-octopus-korean1.jpg" alt="" class="slide-image">
+        </div>
+        <div class="slide-2">
+            <img src="img/brochetas.JPG" alt="" class="slide-image">
+        </div>
+        <div class="slide-3">
+            <img src="img/cucarachas.jpg" alt="" class="slide-image">
+        </div>
     </div>
+
+    <div class="menu-section">
+        <div id="menu">
+            <h2>Menu</h2>
+            <hr>
+        </div>
+        <div class="grid-33">
+            <div>
+                <!--Menu de entradas aqui lmao-->
+                <div>
+                    <h3>Entradas</h3>
+                    <a href="D:/Github works/Proyecto1/Página de descripción de lo seleccionado/descripcion.html">
+                        <h4>generico1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p id="valor">-$500</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <h4>generico2</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p id="valor">-$200</p>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <!--Menu de plato fuerte aqui lmao-->
+                <div>
+                    <h3>Platos Fuertes</h3>
+                    <a href="">
+                        <h4>generico1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p id="valor">-$500</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <h4>generico2</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p id="valor">-$200</p>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <!--Menu de bebidas aqui lmao-->
+                <div>
+                    <h3>Bebidas</h3>
+                    <a href="">
+                        <h4>generico1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p id="valor">-$500</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <h4>generico2</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p id="valor">-$200</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-sencillo">
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a class="link-1" href="D:/Github works/Proyecto1/pagina principal/home.html">Home</a>
+
+                <a href="D:/Github works/Proyecto1/Pagina de Contacto/Contact.html">Contacto</a>
+
+                <a href="#">FAQ</a>
+
+                <a href="D:/Github works/Proyecto1/Pagina de Nosotros/AboutUs.html">Acerca de</a>
+
+                <a href="#">Placeholder1</a>
+
+                <a href="#">Placeholder2</a>
+            </p>
+
+            <p>weird Food &copy; 2022</p>
+        </div>
+    </footer>
+
 </body>
 </html>
