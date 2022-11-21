@@ -48,7 +48,7 @@ header nav ul li a:hover {
 }
 
 .contenedor_comidas {
-    margin-top: 5px;
+    margin-top: 70px;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -124,13 +124,50 @@ header nav ul li a:hover {
     color: #ffffff;
 }
 
-footer{
-    background-color: rgb(26, 24, 24);
-    margin: auto;
-    position: relative;
-    padding: auto;
-    height: 50px;
-    margin-top: 105px;
-    text-align: center;
-    color: white;
-}
+.footer-sencillo {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+    margin-top: 100px;
+  }
+  
+  .footer-sencillo .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+  }
+  /* Footer links */
+  
+  .footer-sencillo p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  
+  .footer-sencillo p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-sencillo .footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-sencillo .footer-links .link-1:before {
+    content: none;
+  }
+  
+  .footer-sencillo p.footer-links a:hover{text-decoration:underline;}
