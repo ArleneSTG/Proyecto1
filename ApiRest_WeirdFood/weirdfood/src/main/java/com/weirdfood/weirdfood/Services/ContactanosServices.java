@@ -19,15 +19,17 @@ public class ContactanosServices {
     public List<ContactanosModel> ObtenerMensajes() {
         try {
             Statement stmt = conn.createStatement();
-            String query = "SELECT * FROM contactanos";
+            String query = "SELECT * FROM contactanos ORDER BY id DESC";
 
             List<ContactanosModel> contac = new ArrayList<>();
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {
                 ContactanosModel contactanosModel = new ContactanosModel(
+                    result.getInt("id"),
                     result.getString("nombre"),
                     result.getString("correo"),
-                    result.getString("mensaje")
+                    result.getString("mensaje"),
+                    result.getString("respondida")
                 );
 
                 contac.add(contactanosModel);
@@ -47,7 +49,22 @@ public class ContactanosServices {
         int resultado = 0;
         try {
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO contactanos (nombre, correo, mensaje) VALUES ('"+contactanosModel.getNombre()+"','"+contactanosModel.getCorreo()+"','"+contactanosModel.getMensaje()+"')";
+            String query = "INSERT INTO contactanos (nombre, correo, mensaje, respondida) VALUES ('"+contactanosModel.getNombre()+"','"+contactanosModel.getCorreo()+"','"+contactanosModel.getMensaje()+"','"+contactanosModel.getRespondida()+"')";
+
+            resultado = stmt.executeUpdate(query);
+            return resultado;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+
+    public int ActualizarMensaje(ContactanosModel contactanosModel) {
+        int resultado = 0;
+        try {
+            Statement stmt = conn.createStatement();
+            String query = "UPDATE contactanos SET respondida='"+contactanosModel.getRespondida()+"' WHERE id='"+contactanosModel.getId()+"'";
 
             resultado = stmt.executeUpdate(query);
             return resultado;

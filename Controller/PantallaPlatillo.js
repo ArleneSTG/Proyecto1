@@ -35,7 +35,7 @@ function MapearListaPlatillos(element) {
         <h1>${element.nombre_comida}</h1>
     </div>
     <div class="descripcion">
-        <p>${element.descrip_ingre}
+        <p>${element.descriComida}
         </p>
     </div>
     <div class="precio">

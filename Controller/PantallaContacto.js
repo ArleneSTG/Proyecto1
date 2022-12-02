@@ -17,7 +17,8 @@ function GuardarMensaje() {
     let data = {
         nombre: document.getElementById("nombre").value,
         correo: document.getElementById("correo").value,
-        mensaje: document.getElementById("mensajeusuario").value
+        mensaje: document.getElementById("mensajeusuario").value,
+        respondida: "NO"
     };
 
     fetch(baseUrl + "/enviar", {

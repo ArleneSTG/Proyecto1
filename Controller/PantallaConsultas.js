@@ -25,19 +25,46 @@ function MapearConsultas(elemento){
         <td class="nombre">${elemento.nombre}</td>
         <td class="correo">${elemento.correo}</td>
         <td class="mensaje">${elemento.mensaje}</td>
-        <td class="repond">No</td>
-        <td><a href="#" onclick="AceptarMensaje()">Validar</a></td>
+        <td class="repond">${elemento.respondida}</td>
+        <td><a href="?id=${elemento.id}#" onclick="AceptarMensaje()">Validar</a></td>
     </tr>
     `;
 }
 
 function AceptarMensaje(){
-    
+    const valores = window.location.search;
+    const urlParams = new URLSearchParams(valores);
+
+    var id = urlParams.get('id');
+    sessionStorage.setItem("idus",id);
+    let mensajevalidacion = document.getElementById("mensaje");
+
+    let data = {
+        id: id,
+        respondida: "SI"
+    };
+
+    fetch(baseUrl + "/actualizarmensaje", {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-type": 'application/json; charset=UTF-8'
+        }
+
+    }).then(res => {
+        ObtenerMensajes();
+        mensajevalidacion.innerHTML = "Consulta actualizada";
+    });
 }
 
 function ValidarLogin() {
     ObtenerMensajes();
-
+    let mensajevalidacion = document.getElementById("mensaje");
+    if(sessionStorage.getItem("idus") != null){
+        AceptarMensaje();
+        mensajevalidacion.innerHTML = "Consulta actualizada";
+        sessionStorage.removeItem("idus");
+    }
     var login = sessionStorage.getItem("login");
     var usuario = sessionStorage.getItem("nombre");
     var tusuario = sessionStorage.getItem("tusuario");

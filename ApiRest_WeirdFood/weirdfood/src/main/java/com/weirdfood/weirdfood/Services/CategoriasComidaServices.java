@@ -54,7 +54,7 @@ public class CategoriasComidaServices {
                     result.getInt("id"),
                     result.getInt("id_categoria"),
                     result.getInt("idcategorias_comida"),
-                    result.getString("nombre_categoria"),
+                    result.getString("descriComida"),
                     result.getString("nombre_comida"),
                     result.getString("descrip_ingre"),
                     result.getString("fotoUrl"),
