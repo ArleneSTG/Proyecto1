@@ -4,7 +4,7 @@ public class InformacionComidaModel {
     private int id;
     private int id_categoria;
     private int idcategorias_comida;
-    private String nombre_categoria;
+    private String descriComida;
     private String nombre_comida;
     private String descrip_ingre;
     private String fotoUrl;
@@ -18,12 +18,12 @@ public class InformacionComidaModel {
         this.precioComida = precioComida;
     }
     
-    public InformacionComidaModel(int id, int id_categoria, int idcategorias_comida, String nombre_categoria,
+    public InformacionComidaModel(int id, int id_categoria, int idcategorias_comida, String descriComida,
             String nombre_comida, String descrip_ingre, String fotoUrl, int publicada, String precioComida) {
         this.id = id;
         this.id_categoria = id_categoria;
         this.idcategorias_comida = idcategorias_comida;
-        this.nombre_categoria = nombre_categoria;
+        this.descriComida = descriComida;
         this.nombre_comida = nombre_comida;
         this.descrip_ingre = descrip_ingre;
         this.fotoUrl = fotoUrl;
@@ -48,11 +48,11 @@ public class InformacionComidaModel {
     public void setIdcategorias_comida(int idcategorias_comida) {
         this.idcategorias_comida = idcategorias_comida;
     }
-    public String getNombre_categoria() {
-        return nombre_categoria;
+    public String getdescriComida() {
+        return descriComida;
     }
-    public void setNombre_categoria(String nombre_categoria) {
-        this.nombre_categoria = nombre_categoria;
+    public void setdescriComida(String descriComida) {
+        this.descriComida = descriComida;
     }
     public String getNombre_comida() {
         return nombre_comida;
